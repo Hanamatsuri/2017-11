@@ -1,0 +1,77 @@
+<html lang="en">
+	<head>
+		<title>大家来打雷博文v0.1</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				color: #61443e;
+				font-family:Monospace;
+				font-size:13px;
+				text-align:center;
+
+				background-color: #bfd1e5;
+				margin: 0px;
+				overflow: hidden;
+			}
+
+			a {
+				color: #a06851;
+			}
+			
+			.info{
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 200px;
+				background: rgba(255,255,255,0.2);
+				text-align: left;
+			}
+			
+
+		</style>
+	</head>
+	<body>
+	 <h1 style="position: absolute;top: 0;left: 40%;">大家来打雷博文v0.1</h1>	
+     <div class="info">
+     	<p>分数：<span id="itemnum"></span></p>
+     	<p>时间：<span id="time"></span></p>
+     	<p>物理速度：<span id="itemspd"></span></p>
+     	<p>攻击力：<span id="atk"></span></p>
+     </div>
+     
+     
+     
+     
+	<div id="container"><br /><br /><br /><br /><br />读取中...</div>
+	
+     
+	<script src="js/three.js"></script>
+	<script src="js/ammo.js"></script>
+	<script src="js/OrbitControls.js"></script>
+	<script src="js/Detector.js"></script>
+	<script src="js/stats.min.js"></script>
+	<script src="js/ConvexObjectBreaker.js"></script>
+	<script src="js/QuickHull.js"></script>
+	<script src="js/ConvexGeometry.js"></script>
+	<script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/game.js"></script>
+    <script>
+    	count=0
+    	function OnMouseDown(){
+    		count+=1
+    		console.log(count)
+    		if(count>=4){
+    			str=""
+    			str+="大家来打雷博文v0.1<br>";
+    			str+="投球数：3<br>";
+    			str+="得分："+localStorage.defen;
+    			str+="<hr><button onclick='location.reload();'>重玩</button>";
+    			document.write(str);
+    		}
+    	}
+    	 document.addEventListener('mousedown', OnMouseDown, false);
+    </script>
+
+	</body>
+</html>
